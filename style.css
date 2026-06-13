@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f4f1eb;
+  --text: #2a2a2a;
+  --muted: #7a7a7a;
+  --blue: #1a3a6b;
+  --red: #c0392b;
+  --border: #c8c0b0;
+  --code-bg: #e8e4dc;
+}
+
+html {
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* ─── SITE HEADER ─── */
+.site-header {
+  border-bottom: 2px solid var(--blue);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg);
+}
+
+.site-header .logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--blue);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.site-header nav a {
+  color: var(--blue);
+  text-decoration: none;
+  margin-left: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+.site-header nav a:hover {
+  text-decoration: underline;
+}
+
+/* ─── INDEX PAGE ─── */
+.hero {
+  padding: 4rem 2rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero h1 {
+  font-size: 2rem;
+  color: var(--blue);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 600px;
+}
+
+.content-grid {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+.projects h2,
+.news h2 {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-item {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-item:last-child {
+  border-bottom: none;
+}
+
+.project-item h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.project-item h3 a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.project-item h3 a:hover {
+  text-decoration: underline;
+}
+
+.project-item .meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.project-item p {
+  font-size: 0.9rem;
+}
+
+.news-item {
+  margin-bottom: 1.2rem;
+  font-size: 0.85rem;
+}
+
+.news-item .date {
+  color: var(--muted);
+  display: block;
+  font-size: 0.75rem;
+}
+
+.news-item a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.news-item a:hover {
+  text-decoration: underline;
+}
+
+/* ─── 404 / POEM PAGES ─── */
+.error-page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 2rem 6rem;
+}
+
+.error-code {
+  font-size: clamp(5rem, 18vw, 10rem);
+  font-weight: 700;
+  color: var(--red);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin-bottom: 0.5rem;
+  opacity: 0.15;
+  user-select: none;
+}
+
+.error-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+.poem {
+  margin-bottom: 3rem;
+}
+
+.poem-title {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.poem pre,
+.poem .verse {
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: 1rem;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.poem .struck {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.poem .blank {
+  display: inline-block;
+  min-width: 8ch;
+  border-bottom: 1px solid var(--text);
+}
+
+.poem .indent-1 { margin-left: 2ch; }
+.poem .indent-2 { margin-left: 4ch; }
+.poem .indent-3 { margin-left: 6ch; }
+.poem .indent-4 { margin-left: 8ch; }
+.poem .indent-5 { margin-left: 12ch; }
+
+.poem .bold { font-weight: 700; }
+.poem .red { color: var(--red); }
+.poem .muted { color: var(--muted); }
+.poem .blue { color: var(--blue); }
+
+.poem .center { text-align: center; }
+.poem .right { text-align: right; }
+
+.poem hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.5rem 0;
+}
+
+/* email poem styling */
+.email-thread {
+  font-size: 0.9rem;
+}
+
+.email-thread .message {
+  border-left: 3px solid var(--border);
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.email-thread .message .from {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+.email-thread .message .body {
+  line-height: 1.7;
+}
+
+.email-thread .unread {
+  border-left-color: var(--blue);
+}
+
+/* code block poem styling */
+.code-poem {
+  background: var(--code-bg);
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* ─── ERROR METADATA FOOTER ─── */
+.error-meta {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 2;
+}
+
+.error-meta table {
+  border-collapse: collapse;
+}
+
+.error-meta td:first-child {
+  padding-right: 2rem;
+  color: var(--muted);
+  opacity: 0.6;
+}
+
+/* ─── NAV FOOTER ON POEM PAGES ─── */
+.wander-prompt {
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.wander-prompt a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.wander-prompt a:hover {
+  text-decoration: underline;
+}
+
+/* ─── SITE FOOTER ─── */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 4rem;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 650px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .site-header nav a:first-child {
+    margin-left: 0;
+  }
+}
