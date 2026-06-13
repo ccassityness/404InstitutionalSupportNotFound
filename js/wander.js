@@ -1,10 +1,10 @@
 const poems = [
-  '/poems/expired-grant.html',
-  '/poems/eliminated-position.html',
-  '/poems/deleted-student-work.html',
-  '/poems/closed-lab.html',
-  '/poems/orphaned-partnership.html',
-  '/poems/decommissioned-server.html',
+  'poems/expired-grant.html',
+  'poems/eliminated-position.html',
+  'poems/deleted-student-work.html',
+  'poems/closed-lab.html',
+  'poems/orphaned-partnership.html',
+  'poems/decommissioned-server.html',
 ];
 
 function randomPoem(exclude) {
