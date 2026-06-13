@@ -14,6 +14,7 @@ function randomPoem(exclude) {
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[href]').forEach(link => {
+    if (link.classList.contains('real-link')) return;
     const href = link.getAttribute('href');
     if (href && !href.startsWith('#') && !href.startsWith('mailto:')) {
       link.addEventListener('click', e => {
